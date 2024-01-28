@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task</title>
+</head>
+<body>
+    <h1>JavaScript Task</h1>
+
+    <script>
+        // JavaScript код, який ви хочете виконати
+        let person = {
+            Name: "Timoha",
+            Age: 15,
+            Height: "177cm",
+            Place: "Spain"
+        };
+
+        console.log("Task 2:");
+        for (let key in person) {
+            console.log(`${key}: ${person[key]}`);
+        }
+
+        console.log("\nTask 3:");
+        let jsonString = JSON.stringify(person);
+        console.log("JSON string:");
+        console.log(jsonString);
+        let newPerson = JSON.parse(jsonString);
+        console.log("Object from JSON string:");
+        console.log(newPerson);
+
+        console.log("\nTask 4:");
+        let clonePerson = Object.assign({}, person);
+        clonePerson.Name = "Tima";
+        console.log("Original object:");
+        console.log(person);
+        console.log("Cloned object:");
+        console.log(clonePerson);
+
+        console.log("\nTask 5:");
+        let contacts = new Map([
+            ["Artem", "123-456-7890"],
+            ["Vlad", "987-654-3210"],
+            ["Nikita", "457-984-3760"],
+            ["Alex", "310-519-2074"],
+            ["Relative1", "406-789-0121"]
+        ]);
+
+        for (let [name, phoneNumber] of contacts) {
+            console.log(`${name}: ${phoneNumber}`);
+        }
+    </script>
+</body>
+</html>
